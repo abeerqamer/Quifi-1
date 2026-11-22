@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #030a17;
+    color: #f1f5f9;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-story {
+    font-family: var(--font-serif);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Deep Ocean-Cobalt App Shell Gradient */
+.quifi-ocean-bg {
+  background-color: #030a17;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 15% 0%, rgba(28, 98, 156, 0.28) 0%, rgba(11, 46, 94, 0.14) 45%, transparent 78%),
+    radial-gradient(ellipse 70% 50% at 88% 95%, rgba(16, 62, 122, 0.22) 0%, transparent 72%);
+}
+
+/* Signature Slide Surface: Ocean-Cobalt Radial Mesh + Subtle Halftone Dot Matrix */
+.quifi-slide-surface {
+  background-color: #05142d;
+  background-image:
+    radial-gradient(circle at 18% 36%, rgba(44, 134, 198, 0.56) 0%, rgba(18, 72, 136, 0.42) 38%, rgba(6, 26, 58, 0.92) 76%, #030e22 100%),
+    linear-gradient(135deg, #0b3c72 0%, #051836 56%, #020b1b 100%);
+}
+
+.quifi-halftone-overlay {
+  background-image: radial-gradient(rgba(186, 230, 253, 0.14) 1px, transparent 1px);
+  background-size: 14px 14px;
+  mask-image: radial-gradient(ellipse 95% 95% at 85% 82%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.22) 45%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 95% at 85% 82%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.22) 45%, transparent 78%);
+}
+
+/* Official Google Sign-In Material Button */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #747775;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', Roboto, arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 14px;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.gsi-material-button .gsi-material-button-contents {
+  flex-grow: 1;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.gsi-material-button:hover:not(:disabled) {
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  background-color: #f8fafc;
+}
+
+.gsi-material-button:disabled {
+  cursor: default;
+  background-color: #ffffff61;
+  border-color: #1f1f1f1f;
+  opacity: 0.6;
+}

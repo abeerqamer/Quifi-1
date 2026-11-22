@@ -1,0 +1,6 @@
+{
+  "name": "Quifi Execution Roadmap & Slides",
+  "description": "12-week enterprise dispute and record-keeping product design execution plan for Quifi, with Google Slides export and synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

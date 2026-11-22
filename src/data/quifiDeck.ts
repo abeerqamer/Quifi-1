@@ -1,0 +1,928 @@
+import { DeckMetadata, SlideData } from '../types/deck';
+
+export const QUIFI_DECK_METADATA: DeckMetadata = {
+  deckTitle: 'Quifi Enterprise Dispute & Record-Keeping System',
+  client: 'Quifi Exchange',
+  author: 'Abeer Qamar',
+  role: 'Senior Product Designer',
+  dateLabel: 'November 2026',
+  horizon: '12-Week UX Execution Plan',
+};
+
+export const INITIAL_QUIFI_SLIDES: SlideData[] = [
+  {
+    id: 'slide-1',
+    slideNumber: 1,
+    actLabel: 'Cover',
+    kicker: 'Slide 01 · Quifi Execution Plan',
+    title: 'Quifi Enterprise Dispute & Record-Keeping System',
+    storyLead: '12-Week Product Design Plan',
+    kind: 'title',
+    bullets: [],
+    metrics: [
+      { id: 's1-m1', value: '100k+', label: 'Active Traders', context: '', icon: 'users' },
+      { id: 's1-m2', value: '40 hrs/wk', label: 'Dedicated Focus', context: '', icon: 'clock' },
+      { id: 's1-m3', value: 'Week 4', label: 'Mockup Gate', context: '', icon: 'compass' },
+      { id: 's1-m4', value: '12 Weeks', label: 'End-to-End', context: '', icon: 'check' },
+    ],
+    speakerNotes:
+      'Open with scope and commitment: a dedicated 12-week product design plan building enterprise dispute record-keeping for 100k+ Quifi traders, anchored at the Week 4 gate.',
+  },
+  {
+    id: 'slide-2',
+    slideNumber: 2,
+    actLabel: 'Act 1 · Problem',
+    kicker: 'Slide 02 · Macro Problem Statement',
+    title: 'Chatbot Trades Need Enterprise Record-Keeping',
+    storyLead: '',
+    heroStatement:
+      '“Quifi lets 100,000+ users trade crypto through a conversational chatbot—but lacks an enterprise record-keeping system to monitor, manage, and track ongoing or resolved disputes.”',
+    heroHighlights: ['monitor', 'manage', 'track', 'ongoing or resolved'],
+    kind: 'macro_hero',
+    bullets: [],
+    speakerNotes:
+      'Anchor the executive framing: Quifi lets 100,000+ users trade crypto through a conversational chatbot, yet operations need an enterprise record-keeping system to monitor, manage, and track ongoing or resolved disputes.',
+  },
+  {
+    id: 'slide-3',
+    slideNumber: 3,
+    actLabel: 'Act 1 · Problem',
+    kicker: 'Slide 03 · Core Problems',
+    title: 'Three Core Problems Break the Chatbot Dispute Workflow',
+    storyLead: '',
+    kind: 'bottleneck_flow',
+    bullets: [],
+    infographicSteps: [
+      {
+        id: 's3-1',
+        stepNumber: '01',
+        title: 'Everything Lives in One Chat',
+        caption:
+          'Trade messages, payment screenshots, and arguments pile up in a single unstructured thread.',
+        icon: 'chat',
+      },
+      {
+        id: 's3-2',
+        stepNumber: '02',
+        title: 'Reviewers Waste Time Scrolling',
+        caption:
+          'Support staff dig through long chat histories and repeat the same intake questions.',
+        icon: 'clock',
+      },
+      {
+        id: 's3-3',
+        stepNumber: '03',
+        title: 'Fairness vs. Privacy',
+        caption:
+          'Buyers and sellers need clear status updates without exposing private personal or wallet details.',
+        icon: 'lock',
+      },
+    ],
+    speakerNotes:
+      'Walk left to right across the three core problems: one cluttered thread forces reviewers to waste time scrolling, while both sides need fair updates without leaking private details.',
+  },
+  {
+    id: 'slide-4',
+    slideNumber: 4,
+    actLabel: 'Act 1 · Problem',
+    kicker: 'Slide 04 · Transparency vs. Privacy',
+    title: 'The Core Tension: Buyer–Seller Transparency vs. Data Privacy',
+    storyLead: '',
+    kind: 'privacy_balance',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's4-left',
+        eyebrow: '01 · SHARED',
+        headline: 'What Both Traders See',
+        caption: '',
+        illustration: 'evidence_card',
+        items: [
+          {
+            id: 's4-l1',
+            leadIn: 'Live Dispute Stage',
+            text: 'Clear progress (Under Review, Awaiting Proof)',
+            icon: 'check',
+          },
+          {
+            id: 's4-l2',
+            leadIn: 'Proof Confirmation',
+            text: 'Verified payment status without exposing bank info',
+            icon: 'check',
+          },
+          {
+            id: 's4-l3',
+            leadIn: 'Action & Payout Timer',
+            text: 'Exact countdown for next steps',
+            icon: 'check',
+          },
+        ],
+      },
+      {
+        id: 's4-right',
+        eyebrow: '02 · PRIVATE',
+        headline: 'What Stays Strictly Private',
+        caption: '',
+        illustration: 'audit_lock',
+        accent: 'amber',
+        items: [
+          {
+            id: 's4-r1',
+            leadIn: 'Personal & Wallet Details',
+            text: 'Counterparty IDs, bank numbers, and wallet history',
+            icon: 'lock',
+          },
+          {
+            id: 's4-r2',
+            leadIn: 'Internal Reviewer Notes',
+            text: 'Shift handoff comments and investigation logs',
+            icon: 'lock',
+          },
+          {
+            id: 's4-r3',
+            leadIn: 'AML & Fraud Risk Flags',
+            text: 'Compliance holds and repeat-offender alerts',
+            icon: 'lock',
+          },
+        ],
+      },
+    ],
+    speakerNotes:
+      'Explain the balancing act: buyers and sellers need clear status updates without ever exposing internal risk flags, reviewer notes, or personal and wallet details.',
+  },
+  {
+    id: 'slide-5',
+    slideNumber: 5,
+    actLabel: 'Act 1 · Strategy',
+    kicker: 'Slide 05 · Design Cadence [Figma SVG #1]',
+    title: 'Why We Use a 12-Week Double Diamond—Not a 5-Day Sprint',
+    storyLead: '',
+    kind: 'figma_full',
+    gateLabel: 'Week 4 Gate',
+    bullets: [],
+    figmaSlot: {
+      slotTitle: '12-Week Double Diamond',
+      flowSummary: 'Discover (W1–2) → Define (W3) → Week 4 Gate → Develop (W4–8) → Deliver (W9–12)',
+      recommendedSize: 'Custom Figma SVG #1 · 12-Week Double Diamond',
+      aspectHint: 'wide-gantt',
+    },
+    speakerNotes:
+      'A 5-day sprint skips deep ops and compliance discovery. Our 12-week Double Diamond validates real workflows before and after the Week 4 gate.',
+  },
+  {
+    id: 'slide-6',
+    slideNumber: 6,
+    actLabel: 'Act 1 · Strategy',
+    kicker: 'Slide 06 · Research Triangulation',
+    title: 'Four Core Research Methods Tailored to Quifi’s Chatbot',
+    storyLead: '',
+    kind: 'method_grid',
+    bullets: [],
+    infographicSteps: [
+      {
+        id: 's6-1',
+        stepNumber: 'WEEKS 1–2',
+        title: 'Chatbot Log & Data Audit',
+        caption:
+          'Mine Quifi’s historical chat logs and app metrics to pinpoint top dispute triggers and where threads stall.',
+        icon: 'search',
+      },
+      {
+        id: 's6-2',
+        stepNumber: 'WEEKS 1–2',
+        title: 'Live Reviewer Shadowing',
+        caption:
+          'Observe internal staff handling real disputes to spot tab-switching, manual copy-pasting, and repeated questions.',
+        icon: 'eye',
+      },
+      {
+        id: 's6-3',
+        stepNumber: 'WEEK 2',
+        title: 'Binance & Bybit P2P Test Cases',
+        caption:
+          'Run live test disputes on leading crypto exchanges to benchmark guided proof uploads and two-sided status timers.',
+        icon: 'compass',
+      },
+      {
+        id: 's6-4',
+        stepNumber: 'WEEKS 5–6',
+        title: 'Task-Based Usability Testing',
+        caption:
+          'Time internal reviewers solving realistic, high-pressure dispute scenarios to catch workflow friction before launch.',
+        icon: 'check',
+      },
+    ],
+    speakerNotes:
+      'Walk through four focused research pillars: auditing Quifi chat logs and metrics, shadowing live reviewers, running Binance and Bybit P2P test disputes, and timing staff in usability sessions.',
+  },
+  {
+    id: 'slide-7',
+    slideNumber: 7,
+    actLabel: 'Act 2 · Discover',
+    kicker: 'Slide 07 · Section Divider',
+    title: 'Discover: Auditing Quifi’s Foundation & Rivals',
+    storyLead:
+      'Inspecting Quifi’s Figma system, mining chatbot dispute logs, shadowing live reviewers, and testing Binance & Bybit P2P.',
+    kind: 'chapter_divider',
+    gateLabel: 'PHASE 01 · DISCOVER · WEEKS 1–2',
+    bullets: [],
+    speakerNotes:
+      'Transition into Phase 01 Discover: Weeks 1–2 inspect Quifi’s Figma system, chatbot dispute logs, live reviewer shifts, and Binance & Bybit P2P.',
+  },
+  {
+    id: 'slide-8',
+    slideNumber: 8,
+    actLabel: 'Act 2 · Discover',
+    kicker: 'Slide 08 · Week 1 Internal Audit',
+    title: 'Week 1 Starts Inside Quifi: Designs, Logs & Live Reviewers',
+    storyLead: '',
+    kind: 'flow_three',
+    gateLabel: 'Week 1 · Internal',
+    bullets: [],
+    infographicSteps: [
+      {
+        id: 's8-1',
+        stepNumber: 'DAYS 1–2',
+        title: 'Audit Figma & Chatbot UI',
+        caption:
+          'Review Quifi’s existing Figma tokens, components, and current chatbot dispute screens to see what carries forward.',
+        icon: 'layers',
+      },
+      {
+        id: 's8-2',
+        stepNumber: 'DAYS 3–4',
+        title: 'Mine Chatbot Dispute Logs',
+        caption:
+          'Analyze historical app data and chat threads to pinpoint top dispute triggers and where resolutions stall.',
+        icon: 'search',
+      },
+      {
+        id: 's8-3',
+        stepNumber: 'DAYS 4–5',
+        title: 'Shadow Reviewers & Ops',
+        caption:
+          'Watch live staff handle disputes and align with Compliance on mandatory audit logs and privacy rules.',
+        icon: 'eye',
+      },
+    ],
+    speakerNotes:
+      'Week 1 stays inside Quifi: auditing existing Figma tokens and chatbot UI, mining historical dispute logs, and shadowing live reviewers alongside Compliance.',
+  },
+  {
+    id: 'slide-9',
+    slideNumber: 9,
+    actLabel: 'Act 2 · Discover',
+    kicker: 'Slide 09 · Two-Sided Discovery',
+    title: 'Listening to Both Sides: High-Volume Traders & Support Staff',
+    storyLead: '',
+    kind: 'pain_comparison',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's9-trader',
+        eyebrow: 'TRADERS · AGES 21–56',
+        headline: 'Trader Anxiety',
+        caption: '“My funds are frozen—why isn’t anyone updating me?”',
+        illustration: 'silent_timer',
+        accent: 'amber',
+        items: [
+          {
+            id: 's9-t1',
+            leadIn: 'Silent Countdown Timers',
+            text: 'No clarity on how long a review will take.',
+          },
+          {
+            id: 's9-t2',
+            leadIn: 'Confusing Proof Rules',
+            text: 'Unsure which receipt or bank details to upload.',
+          },
+          {
+            id: 's9-t3',
+            leadIn: 'Fear of Lost Funds',
+            text: 'Lack of transparent milestones triggers panic messages.',
+          },
+        ],
+      },
+      {
+        id: 's9-staff',
+        eyebrow: 'SUPPORT & COMPLIANCE',
+        headline: 'Reviewer Friction',
+        caption: '“I’m scrolling through 200 chat messages just to find one receipt.”',
+        illustration: 'agent_tabs',
+        accent: 'blue',
+        items: [
+          {
+            id: 's9-s1',
+            leadIn: '4 Disconnected Tools',
+            text: 'Jumping between chat logs, wallets, and spreadsheets.',
+          },
+          {
+            id: 's9-s2',
+            leadIn: 'Repetitive Intake Questions',
+            text: 'Asking every trader for the same basic order info.',
+          },
+          {
+            id: 's9-s3',
+            leadIn: 'Missing Audit Trails',
+            text: 'Manual shift handoffs leave compliance gaps.',
+          },
+        ],
+      },
+    ],
+    speakerNotes:
+      'Contrast both interview tracks: traders fear frozen funds and silent countdown timers, while support reviewers waste time across four disconnected tools.',
+  },
+  {
+    id: 'slide-10',
+    slideNumber: 10,
+    actLabel: 'Act 2 · Discover',
+    kicker: 'Slide 10 · Competitor Test Cases',
+    title: 'Week 2 Goes External: Hands-On Test Cases on Binance & Bybit P2P',
+    storyLead: '',
+    kind: 'benchmark_trio',
+    gateLabel: 'Week 2 · Benchmarks',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's10-test',
+        eyebrow: '01 · LIVE TEST CASES',
+        headline: 'What I’ll Test on Binance & Bybit P2P',
+        caption: '',
+        illustration: 'guided_flow',
+        accent: 'blue',
+        items: [
+          {
+            id: 's10-t1',
+            leadIn: '10-Minute Reply Windows',
+            text: 'How automated timers escalate unresponsive traders fast.',
+          },
+          {
+            id: 's10-t2',
+            leadIn: 'Fast-Track vs. Complex Routing',
+            text: 'Separating simple non-payment from fraud cases.',
+          },
+          {
+            id: 's10-t3',
+            leadIn: 'Guided Proof Checklists',
+            text: 'Blocking blurry chat screenshots with structured uploads.',
+          },
+        ],
+      },
+      {
+        id: 's10-adopt',
+        eyebrow: '02 · QUIFI TAKEAWAYS',
+        headline: '3 Proven Patterns We’ll Bring to Quifi',
+        caption: '',
+        illustration: 'evidence_card',
+        accent: 'teal',
+        items: [
+          {
+            id: 's10-a1',
+            leadIn: 'In-Chat Guided Proof Cards',
+            text: 'Capture Order ID and payment proof inside the bot.',
+          },
+          {
+            id: 's10-a2',
+            leadIn: 'Two-Sided Status Timers',
+            text: 'Show clear deadlines to stop repeat status pings.',
+          },
+          {
+            id: 's10-a3',
+            leadIn: 'Auto-Generated Case Records',
+            text: 'Convert live bot chats into structured reviewer queues.',
+          },
+        ],
+      },
+    ],
+    speakerNotes:
+      'Walk through hands-on test cases on Binance and Bybit P2P and the three proven patterns we will bring directly into Quifi’s chatbot and reviewer workspace.',
+  },
+  {
+    id: 'slide-11',
+    slideNumber: 11,
+    actLabel: 'Act 3 · Define',
+    kicker: 'Slide 11 · Define',
+    title: 'Define: Structuring the System & Case Data',
+    storyLead:
+      'Mapping frontstage chat to backstage operations, defining role workflows, and organizing 100,000+ accounts.',
+    kind: 'chapter_divider',
+    gateLabel: 'PHASE 02 · DEFINE · WEEK 3',
+    bullets: [],
+    speakerNotes:
+      'Transition into Phase 02 Define: mapping frontstage chat to backstage operations, defining role workflows, and organizing 100,000+ accounts.',
+  },
+  {
+    id: 'slide-12',
+    slideNumber: 12,
+    actLabel: 'Act 3 · Define',
+    kicker: 'Slide 12 · Service Blueprint',
+    title: 'Service Blueprint: Turning a Chatbot Conversation Into a Case Record',
+    storyLead: '',
+    kind: 'figma_full',
+    bullets: [],
+    figmaSlot: {
+      slotTitle: 'Service Blueprint',
+      flowSummary: 'In-Chat Trigger → Auto-Captured Case → Live Status Update',
+      recommendedSize: '3-Swimlane Service Blueprint',
+      aspectHint: 'wide-gantt',
+    },
+    speakerNotes:
+      'Trace the three layers: guided chatbot intake above the Line of Visibility, split-screen reviewer triage backstage, and a locked history of every decision below.',
+  },
+  {
+    id: 'slide-13',
+    slideNumber: 13,
+    actLabel: 'Act 3 · Define',
+    kicker: 'Slide 13 · Affinity Synthesis',
+    title: 'Synthesis Shows Where Reviewers Get Stuck or Lose Time',
+    storyLead: '',
+    kind: 'affinity_clusters',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's13-1',
+        eyebrow: 'CLUSTER 01',
+        headline: 'Unclear Ownership',
+        caption: '',
+        illustration: 'urgency_queue',
+        accent: 'blue',
+        items: [
+          {
+            id: 's13-1a',
+            leadIn: 'Shadowing',
+            text: 'Staff skip complex threads in shared queues',
+          },
+          {
+            id: 's13-1b',
+            leadIn: 'Log Audit',
+            text: 'Tickets bounce across shifts with duplicate replies',
+          },
+        ],
+      },
+      {
+        id: 's13-2',
+        eyebrow: 'CLUSTER 02',
+        headline: 'Missing Decision History',
+        caption: '',
+        illustration: 'audit_lock',
+        accent: 'amber',
+        items: [
+          {
+            id: 's13-2a',
+            leadIn: 'Shadowing',
+            text: 'Shift handoffs rely on informal side messages',
+          },
+          {
+            id: 's13-2b',
+            leadIn: 'Log Audit',
+            text: 'Status edits lack timestamps or reviewer attribution',
+          },
+        ],
+      },
+      {
+        id: 's13-3',
+        eyebrow: 'CLUSTER 03',
+        headline: 'Silent Waiting Loops',
+        caption: '',
+        illustration: 'silent_timer',
+        accent: 'teal',
+        items: [
+          {
+            id: 's13-3a',
+            leadIn: 'Shadowing',
+            text: 'Traders repeatedly ping “any update?” mid-review',
+          },
+          {
+            id: 's13-3b',
+            leadIn: 'Log Audit',
+            text: 'No visible SLA countdowns or milestone alerts in bot',
+          },
+        ],
+      },
+    ],
+    speakerNotes:
+      'Affinity synthesis clusters Week 1–2 shadowing and log audit findings into three concrete breakdowns: unclear ownership, missing decision history, and silent waiting loops.',
+  },
+  {
+    id: 'slide-14',
+    slideNumber: 14,
+    actLabel: 'Act 3 · Define',
+    kicker: 'Slide 14 · User Roles & JTBD',
+    title: 'Three Core Roles & What Each One Needs Most',
+    storyLead: '',
+    kind: 'persona_trio',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's14-1',
+        eyebrow: 'ROLE 01',
+        stat: '100k+ Traders',
+        headline: 'Buyer / Seller (In Chatbot)',
+        caption: '',
+        illustration: 'guided_flow',
+        accent: 'blue',
+        items: [
+          {
+            id: 's14-1a',
+            leadIn: 'Primary Job',
+            text: 'Submit payment proof once and know funds are safe.',
+          },
+          {
+            id: 's14-1b',
+            leadIn: 'Core UX Need',
+            text: 'Guided in-chat proof upload & clear payout timer.',
+          },
+        ],
+      },
+      {
+        id: 's14-2',
+        eyebrow: 'ROLE 02',
+        stat: 'High-Volume Triage',
+        headline: 'Dispute Reviewer',
+        caption: '',
+        illustration: 'urgency_queue',
+        accent: 'amber',
+        items: [
+          {
+            id: 's14-2a',
+            leadIn: 'Primary Job',
+            text: 'Verify receipts and settle routine disputes without tab-hopping.',
+          },
+          {
+            id: 's14-2b',
+            leadIn: 'Core UX Need',
+            text: 'Priority SLA queue & side-by-side chat/proof view.',
+          },
+        ],
+      },
+      {
+        id: 's14-3',
+        eyebrow: 'ROLE 03',
+        stat: '100% Audit Trail',
+        headline: 'Compliance Lead',
+        caption: '',
+        illustration: 'compliance_hold',
+        accent: 'teal',
+        items: [
+          {
+            id: 's14-3a',
+            leadIn: 'Primary Job',
+            text: 'Inspect flagged accounts and export uneditable case records.',
+          },
+          {
+            id: 's14-3b',
+            leadIn: 'Core UX Need',
+            text: 'Locked decision timeline & instant risk-flag filters.',
+          },
+        ],
+      },
+    ],
+    speakerNotes:
+      'Highlight the three core roles and their jobs-to-be-done: buyers and sellers needing guided proof and clear payout timers, reviewers handling high-volume triage, and Compliance enforcing a 100% audit trail.',
+  },
+  {
+    id: 'slide-15',
+    slideNumber: 15,
+    actLabel: 'Act 3 · Define',
+    kicker: 'Slide 15 · Case Details & Navigation',
+    title: 'Clear Navigation Validated via Open Card Sort & Tree Test',
+    storyLead: '',
+    kind: 'figma_full',
+    bullets: [],
+    figmaSlot: {
+      slotTitle: 'Dispute Status & IA Flow',
+      flowSummary: 'Open → In Review → Escalated / Frozen → Resolved',
+      recommendedSize: 'Case Status & Navigation Flow',
+      aspectHint: 'wide-gantt',
+    },
+    speakerNotes:
+      'Validated with reviewers via open card sorting and tree testing so every case captures Trade ID, amount, and payment proof, routing routine disputes directly from Open to In Review to Resolved while high-risk cases branch through Escalated / Frozen.',
+  },
+  {
+    id: 'slide-16',
+    slideNumber: 16,
+    actLabel: 'Act 4 · Develop',
+    kicker: 'Slide 16 · Develop',
+    title: 'Develop: Prototyping & Week 4 Mockup Gate',
+    storyLead:
+      'Designing the chatbot-to-case flow, testing layouts with Crazy 8s, and delivering clickable Week 4 mockups.',
+    kind: 'chapter_divider',
+    gateLabel: 'PHASE 03 · DEVELOP · WEEK 4 GATE → WEEK 8',
+    bullets: [],
+    speakerNotes:
+      'Transition into Phase 03 Develop: moving from structure into the chatbot-to-case flow, Crazy 8s layout explorations, and clickable Week 4 mockups.',
+  },
+  {
+    id: 'slide-17',
+    slideNumber: 17,
+    actLabel: 'Act 4 · Develop',
+    kicker: 'Slide 17 · Chat-to-Record User Flow',
+    title: 'Turning a Chatbot Conversation Into a Structured Case Record',
+    storyLead: '',
+    kind: 'figma_full',
+    bullets: [],
+    figmaSlot: {
+      slotTitle: 'Chat-to-Record User Flow',
+      flowSummary: 'Tap Report Issue → Guided Proof → Escrow Lock → Smart Triage → Split-Screen → Resolution',
+      recommendedSize: '2-Row Chat-to-Record User Flow',
+      aspectHint: 'wide-gantt',
+    },
+    speakerNotes:
+      'Walk through the 6-step connected flow: traders tap Report Issue, upload guided proof, and lock escrow automatically; backstage ops then route via Smart Triage into Split-Screen Review and push a Two-Sided Resolution back to chat.',
+  },
+  {
+    id: 'slide-18',
+    slideNumber: 18,
+    actLabel: 'Act 4 · Develop',
+    kicker: 'Slide 18 · Divergent Sketching',
+    title: 'Crazy 8s: Turning Discovery Insights Into Testable Layout Hypotheses',
+    storyLead: '',
+    kind: 'crazy_eights',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's18-1',
+        eyebrow: 'SKETCH 01',
+        stat: 'TRIAGE SPEED',
+        headline: 'Bulk Actions',
+        caption: 'Testing inline bar first—keeps the queue visible during rapid triage.',
+        illustration: 'sketch_bulk_queue',
+        accent: 'teal',
+      },
+      {
+        id: 's18-2',
+        eyebrow: 'SKETCH 02',
+        stat: 'ZERO TAB-HOPPING',
+        headline: 'Split-Screen View',
+        caption: 'Testing 3-pane layout—aims to eliminate tab-switching across tools.',
+        illustration: 'sketch_split_pane',
+        accent: 'teal',
+      },
+      {
+        id: 's18-3',
+        eyebrow: 'SKETCH 03',
+        stat: 'AUDIT CLARITY',
+        headline: 'Locked Decision Log',
+        caption: 'Testing dedicated drawer—separates uneditable audit logs from chat.',
+        illustration: 'sketch_audit_drawer',
+        accent: 'teal',
+      },
+    ],
+    speakerNotes:
+      'Rapid Crazy 8s sketching frames three Week 4 layout hypotheses to test early: an inline bulk action bar keeps queues visible, a 3-pane view aims to eliminate tab-switching, and a dedicated drawer separates uneditable audit logs from chat.',
+  },
+  {
+    id: 'slide-19',
+    slideNumber: 19,
+    actLabel: 'Act 4 · Develop',
+    kicker: 'Slide 19 · Mandatory Checkpoint',
+    title: 'Week 4 Mandatory Gate: Clickable Mid-Fidelity Prototype Review',
+    storyLead: '',
+    kind: 'week4_wireframes',
+    gateLabel: 'Week 4 · Mandatory Gate',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's19-1',
+        eyebrow: 'FRAME 01',
+        stat: '01 · QUEUE TRIAGE',
+        headline: 'Priority Queue',
+        caption: 'Urgency-sorted SLA rows with bulk bar',
+        illustration: 'queue_preview',
+      },
+      {
+        id: 's19-2',
+        eyebrow: 'FRAME 02',
+        stat: '02 · 3-PANE WORKSPACE',
+        headline: '3-Pane Evidence Workspace',
+        caption: 'Chat, receipt & risk side-by-side',
+        illustration: 'split_preview',
+      },
+      {
+        id: 's19-3',
+        eyebrow: 'FRAME 03',
+        stat: '03 · AUDIT TRAIL',
+        headline: 'Locked Decision Timeline',
+        caption: 'Uneditable history of every action',
+        illustration: 'audit_preview',
+      },
+    ],
+    phaseOutputs: {
+      label: 'Week 4 Sign-Off Criteria',
+      deliverables: '',
+      whyItMatters:
+        'Product, Ops Lead & Engineering validate core task flows in Figma before sprint development begins.',
+    },
+    speakerNotes:
+      'At the Week 4 gate, Product, Ops Lead, and Engineering validate the Priority Queue, 3-Pane Evidence Workspace, and Locked Decision Timeline in Figma before sprint development begins.',
+  },
+  {
+    id: 'slide-20',
+    slideNumber: 20,
+    actLabel: 'Act 5 · Deliver',
+    kicker: 'Slide 20 · Deliver',
+    title: 'Deliver: Validate, Stress-Test & Scale to Launch',
+    storyLead:
+      'Running task-based usability tests with reviewers, stress-testing crypto edge cases, shipping WCAG AA specs, and launching a phased beta.',
+    kind: 'chapter_divider',
+    gateLabel: 'PHASE 04 · DELIVER · WEEKS 5–12',
+    bullets: [],
+    speakerNotes:
+      'Transition into Phase 04 Deliver: running task-based usability tests with reviewers, stress-testing crypto edge cases, shipping WCAG AA specs, and launching a phased beta.',
+  },
+  {
+    id: 'slide-21',
+    slideNumber: 21,
+    actLabel: 'Act 5 · Deliver',
+    kicker: 'Slide 21 · Research Pillar 04',
+    title: 'Task-Based Usability Testing Measures Speed, Errors & Ease',
+    storyLead: '',
+    kind: 'usability_scenario',
+    gateLabel: 'Weeks 5–6 · Validation',
+    heroStatement:
+      '“Find last week’s disputed trade, verify the payment proof, and escalate it to Compliance.”',
+    bullets: [],
+    infographicSteps: [
+      {
+        id: 's21-1',
+        stepNumber: 'Seconds per case',
+        title: 'Time-on-Task',
+        caption: 'Compare speed vs. Week 1 baseline',
+        icon: 'clock',
+      },
+      {
+        id: 's21-2',
+        stepNumber: 'Errors per task',
+        title: 'Error Rate',
+        caption: 'Catch misclicks & missed proof details',
+        icon: 'alert',
+      },
+      {
+        id: 's21-3',
+        stepNumber: '1–7 ease rating',
+        title: 'SEQ Score',
+        caption: 'Measure perceived effort right after task',
+        icon: 'zap',
+      },
+    ],
+    speakerNotes:
+      'Moderators test realistic unassisted scenarios with 5–8 internal reviewers in Weeks 5–6, measuring Time-on-Task against Week 1, Error Rate, and post-task SEQ Score.',
+  },
+  {
+    id: 'slide-22',
+    slideNumber: 22,
+    actLabel: 'Act 5 · Deliver',
+    kicker: 'Slide 22 · Edge-Case Stress Test',
+    title: 'Handling Messy Real-World Trades Before Engineering',
+    storyLead: '',
+    kind: 'stress_matrix',
+    gateLabel: 'Weeks 6–7 · Validation',
+    bullets: [],
+    benchmarkTable: {
+      headers: ['Real-World Edge Case', 'Why Chatbot Threads Fail', 'Workspace Safeguard'],
+      rows: [
+        {
+          source: 'Repeat Offenders',
+          observe: 'Prior warnings buried in old chat threads',
+          extract: 'Auto Risk-History Badge in case header',
+        },
+        {
+          source: 'Partial Payments',
+          observe: '80% fiat transfers cause manual math errors',
+          extract: 'Guided Split-Payout Calculator with dual check',
+        },
+        {
+          source: 'Simultaneous Disputes',
+          observe: 'One trader opens multiple disputes at once',
+          extract: 'Linked-Case Grouping across active orders',
+        },
+        {
+          source: 'Altered Payment Receipts',
+          observe: 'Fake screenshots slip past rushed reviewers',
+          extract: 'Side-by-Side Proof Zoom + one-click fraud flag',
+        },
+      ],
+    },
+    speakerNotes:
+      'We stress-test messy real-world crypto trades—repeat offenders, partial payments, simultaneous disputes, and altered payment receipts—before sprint engineering begins.',
+  },
+  {
+    id: 'slide-23',
+    slideNumber: 23,
+    actLabel: 'Act 5 · Deliver',
+    kicker: 'Slide 23 · Weeks 8–10 Handoff',
+    title: 'Engineering Handoff: Clear States, Accessibility & Reusable Components',
+    storyLead: '',
+    kind: 'handoff_specs',
+    gateLabel: 'Weeks 8–10 · Handoff',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's23-1',
+        eyebrow: 'PILLAR 01',
+        headline: 'Role Views & UI States',
+        caption: 'Every screen state & permission defined',
+        illustration: 'handoff_states',
+      },
+      {
+        id: 's23-2',
+        eyebrow: 'PILLAR 02',
+        headline: 'WCAG AA Accessibility',
+        caption: 'High-contrast readability & keyboard speed',
+        illustration: 'handoff_wcag',
+      },
+      {
+        id: 's23-3',
+        eyebrow: 'PILLAR 03',
+        headline: 'Figma Kit Expansion',
+        caption: 'Reusable tokens & dispute components',
+        illustration: 'handoff_tokens',
+      },
+    ],
+    speakerNotes:
+      'Engineering receives complete Role Views & UI States, WCAG AA contrast and keyboard focus specs, and reusable Figma dispute components before sprint build.',
+  },
+  {
+    id: 'slide-24',
+    slideNumber: 24,
+    actLabel: 'Act 5 · Deliver',
+    kicker: 'Slide 24 · Weeks 11–12 Beta Launch',
+    title: 'Phased Beta Rollout Protects Daily Operations During Launch',
+    storyLead: '',
+    kind: 'rollout_timeline',
+    gateLabel: 'Weeks 11–12 · Rollout',
+    bullets: [],
+    infographicSteps: [
+      {
+        id: 's24-1',
+        stepNumber: 'STAGE 01',
+        title: 'Week 11: Senior Reviewer Pilot',
+        caption: '5 senior reviewers handle live disputes in the new workspace alongside legacy tools.',
+        icon: 'users',
+      },
+      {
+        id: 's24-2',
+        stepNumber: 'STAGE 02',
+        title: 'Week 12: Full Support Team Rollout',
+        caption: 'All support shifts migrate to the 3-pane dashboard with live QA monitoring.',
+        icon: 'shield',
+      },
+      {
+        id: 's24-3',
+        stepNumber: 'STAGE 03',
+        title: 'Launch: 100k+ Trader Bot Rollout',
+        caption: 'Guided in-chat dispute intake and live payout timers go live for all traders.',
+        icon: 'chat',
+      },
+    ],
+    speakerNotes:
+      'A three-stage rollout protects daily operations: 5 senior reviewers pilot Week 11, full support shifts migrate in Week 12, and guided intake rolls out to 100k+ traders at launch.',
+  },
+  {
+    id: 'slide-25',
+    slideNumber: 25,
+    actLabel: 'Act 5 · Deliver',
+    kicker: 'Slide 25 · Post-Launch Impact',
+    title: 'Measuring Real UX Impact Against Week 1 Baselines',
+    storyLead: '',
+    kind: 'kpi_trio',
+    gateLabel: 'Day 30 · Outcomes',
+    bullets: [],
+    bentoCards: [
+      {
+        id: 's25-1',
+        eyebrow: 'SPEED',
+        stat: 'Faster Resolution',
+        headline: 'Lower Handling Time',
+        caption: 'Measured directly against Week 1 log audit baselines.',
+        illustration: 'speed_gauge',
+      },
+      {
+        id: 's25-2',
+        eyebrow: 'ADOPTION',
+        stat: '0 Spreadsheets',
+        headline: 'One Unified Workspace',
+        caption: '100% of disputes and audit logs tracked inside Quifi.',
+        illustration: 'error_shield',
+        accent: 'amber',
+      },
+      {
+        id: 's25-3',
+        eyebrow: 'TRUST',
+        stat: 'Fewer Pings',
+        headline: 'Reduced Repeat Tickets',
+        caption: 'Clear in-chat timers stop anxious status follow-ups.',
+        illustration: 'trust_heart',
+        accent: 'emerald',
+      },
+    ],
+    phaseOutputs: {
+      label: '12-Week Outcome',
+      deliverables: '',
+      whyItMatters:
+        'From unstructured chatbot threads to an auditable, scalable dispute system in 12 weeks.',
+    },
+    speakerNotes:
+      'Close by measuring real UX impact against Week 1 baselines: faster resolution, zero spreadsheets across operations, and fewer anxious follow-up pings in chat.',
+  },
+];
